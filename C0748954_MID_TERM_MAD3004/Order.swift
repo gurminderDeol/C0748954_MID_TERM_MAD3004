@@ -11,7 +11,7 @@ class Order: IDisplay
 {
     var orderId : Int!
     var orderDate : String!
-    var product = [Order]()
+    var product = [Product]()
     
     var orderTotal : Float!
     //var pr = Product(120.0,10)
@@ -29,7 +29,7 @@ class Order: IDisplay
         return Float(Product.quantity) * Product.price
     }
     func display()
-    {
+    {        
         print("orderiId: \(orderId!) orderDate: \(orderDate!)")
     }
     
