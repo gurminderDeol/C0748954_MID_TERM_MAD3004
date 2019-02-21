@@ -13,6 +13,18 @@ class Product: Manufacturer,IDisplay
     var productName : String!
     var price : Float!
     var quantity : Int!
+    override init()
+    {
+        super.init()
+    }
+    
+    
+    convenience init(_ price: Float, _ quantity: Int)
+    {
+        self.init()
+        self.price = price
+        self.quantity = quantity
+    }
     
     init(_ productId : String,_ productName :String,_ price: Float, _ quantity: Int,_ manufacturerId: String,_ manufacturerName:String )
     {

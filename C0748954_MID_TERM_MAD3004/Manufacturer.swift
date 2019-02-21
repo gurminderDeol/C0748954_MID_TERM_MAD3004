@@ -13,6 +13,10 @@ class Manufacturer
     
     var manufacturerId:String!
     var manufacturerName:String!
+    init()
+    {
+        
+    }
     
     init(_ manufacturerId : String,_ manufacturerName: String)
     {

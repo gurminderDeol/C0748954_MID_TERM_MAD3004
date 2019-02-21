@@ -10,29 +10,29 @@ import Foundation
 class Order: IDisplay
 {
     var orderId : Int!
-    var orderDate : Date!
-    var products = [String]()
+    var orderDate : String!
+    var product = [Order]()
+    
     var orderTotal : Float!
+    //var pr = Product(120.0,10)
 
     
-    init(_ orderId: Int,_ orderDate: Date)
+    init(_ orderId: Int,_ orderDate: String)
     {
         
         self.orderId = orderId
         self.orderDate = orderDate
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    func display() {
-    
-
+    func orderTotalCal(_ Product: Product ) -> Float
+    {
+        
+        return Float(Product.quantity) * Product.price
+    }
+    func display()
+    {
+        print("orderiId: \(orderId!) orderDate: \(orderDate!)")
     }
     
-    
 }
+    
+
