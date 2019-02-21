@@ -11,8 +11,8 @@ class Manufacturer
 {
     
     
-    var manufacturerId:String
-    var manufacturerName:String
+    var manufacturerId:String!
+    var manufacturerName:String!
     
     init(_ manufacturerId : String,_ manufacturerName: String)
     {
@@ -21,6 +21,6 @@ class Manufacturer
     }
     func display()
     {
-        print("manufacturerId: \(manufacturerId) manufacturerName: \(manufacturerName)")
+        print("manufacturerId: \(manufacturerId!), manufacturerName: \(manufacturerName!)")
     }
 }

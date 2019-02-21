@@ -7,20 +7,25 @@
 //
 
 import Foundation
-class product: Manufacturer,IDisplay
+class Product: Manufacturer,IDisplay
 {
-    var productId : Int!
+    var productId : String!
     var productName : String!
     var price : Float!
     var quantity : Int!
     
-    init(_ productId : Int,_ productName :String,_ price: Float, _ quantity: Int,_ manufacturerId: String,_ manufacturerName:String )
+    init(_ productId : String,_ productName :String,_ price: Float, _ quantity: Int,_ manufacturerId: String,_ manufacturerName:String )
     {
         super.init(manufacturerId,manufacturerName)
         self.productId = productId
         self.productName = productName
         self.price = price
         self.quantity = quantity
+    }
+    override func display()
+    {
+        super.display()
+        print("productId: \(productId!) productName: \(productName!) price: \(price!) quantity:\(quantity!)")
     }
     
 }
